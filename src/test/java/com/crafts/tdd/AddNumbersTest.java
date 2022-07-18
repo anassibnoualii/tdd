@@ -19,4 +19,9 @@ public class AddNumbersTest {
   public void should_return_three() {
     Assertions.assertThat(AddNumbers.add("1,2")).isEqualTo(3);
   }
+
+  @Test
+  public void should_return_ten() {
+    Assertions.assertThat(AddNumbers.add("1,2,3,4")).isEqualTo(10);
+  }
 }
