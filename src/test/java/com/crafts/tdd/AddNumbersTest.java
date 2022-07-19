@@ -24,4 +24,9 @@ public class AddNumbersTest {
   public void should_return_ten() {
     Assertions.assertThat(AddNumbers.add("1,2,3,4")).isEqualTo(10);
   }
+
+  @Test
+  public void should_support_new_line_then_return_six() {
+    Assertions.assertThat(AddNumbers.add("1\n2,3")).isEqualTo(6);
+  }
 }
