@@ -8,7 +8,7 @@ public class AddNumbers {
     if (input.isEmpty()) {
       return 0;
     }
-    String[] numbers = input.split(",");
+    String[] numbers = input.split("[,\n]");
     return getSum(numbers);
   }
 
