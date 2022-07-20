@@ -30,6 +30,9 @@ public class AddNumbers {
     if (parsedNumber < 0) {
       throw new IllegalArgumentException("negatives not allowed");
     }
+    if (parsedNumber > 1000) {
+      return 0;
+    }
     return parsedNumber;
   }
 }
