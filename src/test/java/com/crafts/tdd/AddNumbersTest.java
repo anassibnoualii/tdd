@@ -39,4 +39,9 @@ public class AddNumbersTest {
   public void should_throw_exception_in_there_is_invalid_numbers() {
     AddNumbers.add("1,a,5");
   }
+
+  @Test
+  public void should_skip_big_number_and_return_ten() {
+    Assertions.assertThat(AddNumbers.add("1,2,3,1001,4")).isEqualTo(10);
+  }
 }
