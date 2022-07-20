@@ -1,5 +1,7 @@
 package com.crafts.tdd;
 
+import static org.apache.commons.lang.StringUtils.isNumeric;
+
 public class AddNumbers {
 
   private AddNumbers() {}
@@ -21,6 +23,13 @@ public class AddNumbers {
   }
 
   private static int stringToInt(String number) {
-    return Integer.parseInt(number);
+    if (!isNumeric(number)) {
+      throw new IllegalArgumentException("Invalid number");
+    }
+    var parsedNumber = Integer.parseInt(number);
+    if (parsedNumber < 0) {
+      throw new IllegalArgumentException("negatives not allowed");
+    }
+    return parsedNumber;
   }
 }
