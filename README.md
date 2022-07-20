@@ -17,10 +17,8 @@ Allow the Add method to handle new lines between numbers (instead of commas):
 The following input is ok: “1\n2,3” (will equal 6)
 
 
+###Step 4
+- Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.
+- Validate if the String contain only numbers otherwise throw an exception "Invalid numbers" 
 ###Step 5
-Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.
-
-If there are multiple negatives, show all of them in the exception message.
-
-###Step 6
 Numbers bigger than 1000 should be ignored example "1,2,3,1001,4" should return 10

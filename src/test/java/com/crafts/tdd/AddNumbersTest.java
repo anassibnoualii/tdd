@@ -29,4 +29,14 @@ public class AddNumbersTest {
   public void should_support_new_line_then_return_six() {
     Assertions.assertThat(AddNumbers.add("1\n2,3")).isEqualTo(6);
   }
+
+  @Test(expected = IllegalArgumentException.class)
+  public void should_throw_exception_in_there_is_negative_numbers() {
+    AddNumbers.add("1,-3,5");
+  }
+
+  @Test(expected = IllegalArgumentException.class)
+  public void should_throw_exception_in_there_is_invalid_numbers() {
+    AddNumbers.add("1,a,5");
+  }
 }
